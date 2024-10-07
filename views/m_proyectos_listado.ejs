@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Mantenimiento de Proyectos</title>
+</head>
+<body>
+    <h1>Mantenimiento de Proyectos</h1>
+    <hr>
+    <p><a href="/m_proyectos_nuevo">Nuevo Proyecto</a></p>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th colspan="2">Acciones</th>
+        </tr>
+        <% records.forEach(function(proyecto) { %>
+        <tr>
+            <td><%= proyecto._id %></td>
+            <td><%= proyecto.nombre %></td>
+            <td><%= proyecto.descripcion %></td>
+            <td><a href="/m_proyectos_editar/<%= proyecto._id %>">Editar</a></td>
+            <td><a href="/m_proyectos_eliminar/<%= proyecto._id %>">Eliminar</a></td>
+        </tr>
+        <% }); %>
+    </table>
+</body>
+</html>

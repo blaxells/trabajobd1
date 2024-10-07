@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Editar Proyecto</title>
+</head>
+<body>
+    <h1>Editar Proyecto</h1>
+    <hr>
+    <form method="post" action="/m_proyectos_grabar_editar">
+        <input type="hidden" name="xid" id="xid" value="<%= proyecto._id %>">
+        <table border="0">
+            <tr>
+                <td>Nombre:</td>
+                <td><input type="text" name="xnom" id="xnom" size="30" value="<%= proyecto.nombre %>"></td>
+            </tr>
+            <tr>
+                <td>Descripción:</td>
+                <td><input type="text" name="xdesc" id="xdesc" size="50" value="<%= proyecto.descripcion %>"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Grabar"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

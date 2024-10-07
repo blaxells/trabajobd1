@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Sistema de control de Ingreso - Editar Área</title>
+</head>
+<body>
+    <h1>Editar Área</h1>
+    <hr>
+    <form method="post" action="/m_areas_grabar_editar">
+        <input type="hidden" name="xid" id="xid" value="<%= area._id %>">
+        <table border="0">
+            <tr>
+                <td>Nombre:</td>
+                <td><input type="text" name="xnom" id="xnom" size="30" value="<%= area.nombre %>"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Grabar"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
